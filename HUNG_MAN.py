@@ -9,7 +9,7 @@ def importaword():
         sorted_word = sorted(word)
     return word , sorted_word    
 
-# print(importaword())                     
+                   
 
 
 # checker 
@@ -65,8 +65,6 @@ def  Main_Game():
     correct = []
     my_word = []
     
-
-    print(new_word)
     
     while number_of_tries > 0 and (my_word) != new_word:
        hd(new_word , correct , 1 )
