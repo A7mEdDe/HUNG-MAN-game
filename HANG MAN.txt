@@ -1,0 +1,51 @@
+##### hang man #####
+1. importaword
+"""
+This function imports a random word from a file named "words.txt".
+It reads the file, splits the content into a list of words, and selects one randomly.
+The selected word is converted to lowercase, split into a list of characters, and sorted.
+The function returns the original word and the sorted list of its characters.
+"""
+
+2. checker
+"""
+This function checks if the guessed letter (new_litter) is in the new word (new_word).
+If it is, it adds the letter to both the correct guesses list (correct) and the player's current word (my_word),
+sorting my_word afterwards. If the guessed letter appears more than once, it is added multiple times to my_word.
+The function updates and prints the hidden word display using hd() and returns the updated correct list, my_word,
+and the number of remaining tries.
+"""
+
+3. hd
+"""
+This function displays the current state of the hidden word.
+It iterates through each character in the word and checks if it has been correctly guessed (present in the correct list).
+If the character has been guessed, it is added to the display string; otherwise, an underscore (_) is added. The resulting string is printed.
+"""
+
+4. input_litter
+"""
+This function handles the input of a new letter from the player.
+It continues to prompt for input until the player either wins or runs out of tries.
+The input is converted to lowercase and the first character is taken as the guessed letter.
+If the letter has already been guessed (in history), a message is printed. If the letter is in the new word (new_word),
+it is added to the history. If not, it is added to the history, tries are decremented, and a message is printed.
+The function returns the guessed letter, updated history, and remaining tries.
+"""
+
+5. printer
+"""
+This function prints the final game result.
+If the player's current word (my_word) matches the new word (new_word), a winning message is printed.
+If the player runs out of tries, a game-over message is printed.
+"""
+
+6. Main Game Loop
+"""
+This is the main game loop.
+It starts by importing a word and its sorted character list using importaword().
+The loop continues as long as the player has tries left and has not guessed the word.
+In each iteration, the hidden word is displayed using hd(), a new letter is inputted using input_litter(),
+the guess is checked using checker(), and the game status is printed using printer(). 
+Additionally, the current state of new_word, correct, history, and my_word is printed for debugging purposes.
+"""
